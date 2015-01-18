@@ -10,7 +10,5 @@ public interface IDataModel {
 	public List<String> getTableNames();
 	
 	public Map<String, List<IDataModelIndex>> getIndicesForTable(String tableName);
-	
-	
-	
+		
 }
