@@ -5,7 +5,7 @@ public class DataModelColumn {
 	private final String table;
 	private final String columnName;
 	private final DataModelType columnDataType;
-	private final boolean isPrimaryKey;
+	private boolean isPrimaryKey;
 
 	/**
 	 * New Column of DataModel for table
@@ -46,6 +46,10 @@ public class DataModelColumn {
 	 */
 	public boolean isPrimaryKey() {
 		return isPrimaryKey;
+	}
+
+	public void setPrimaryKey(boolean b) {
+	    isPrimaryKey = b;
 	}
 	
 }

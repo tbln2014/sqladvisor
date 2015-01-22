@@ -25,5 +25,20 @@
 	<artifactId>commons-lang3</artifactId>
 	<version>3.3.2</version>
   </dependency> 
+  <dependency>
+    <groupId>net.sourceforge.collections</groupId>
+    <artifactId>collections-generic</artifactId>
+    <version>4.01</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.ddlutils</groupId>
+    <artifactId>ddlutils-tolina-patched</artifactId>
+    <version>1.2</version>
+  </dependency>
+  <dependency>
+	<groupId>org.apache.commons</groupId>
+	<artifactId>commons-io</artifactId>
+	<version>1.3.2</version>
+  </dependency>
 </dependencies>
 </project>

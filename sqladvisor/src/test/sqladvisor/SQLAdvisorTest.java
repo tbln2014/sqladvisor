@@ -23,7 +23,8 @@ public class SQLAdvisorTest {
 	@Before
 	public void setup() {
 		Map<String, List<DataModelIndex>> indices = new HashMap<String, List<DataModelIndex>>();
-		dataModelMock = new DataModel("TEST", Arrays.asList("TAB1", "TAB2", "TAB3"), indices);
+		Map<String, List<DataModelColumn>> columns = new HashMap<String, List<DataModelColumn>>();
+		dataModelMock = new DataModel("TEST", Arrays.asList("TAB1", "TAB2", "TAB3"), columns, indices);
 		dataModelMock.addIndices("TAB1", Arrays.asList( //
 				DataModel.createIndex(new DataModelColumn("TAB1", "DATA1", DataModelType.INTEGER, false)), //
 				DataModel.createIndex(new DataModelColumn("TAB1", "IDX", DataModelType.INTEGER, true)) //
