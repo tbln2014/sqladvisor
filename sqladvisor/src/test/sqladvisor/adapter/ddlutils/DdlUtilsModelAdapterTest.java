@@ -33,10 +33,7 @@ public class DdlUtilsModelAdapterTest {
 			return input;
 		    }
 		});
-	System.out.println(new File(".").getAbsolutePath());
-	Database db = new DatabaseIO()
-		.read(new File(
-			"dbmodel.xml"));
+	Database db = new DatabaseIO().read(new File("dbmodel.xml"));
 	model = ddl.transform(db);
     }
 
@@ -55,7 +52,7 @@ public class DdlUtilsModelAdapterTest {
 		List<String> adviseStatement = new SQLAdvisor(model)
 			.adviseStatement(sql);
 		if (adviseStatement.size() > 0) {
-		    System.out.println("SQL: " + sql);
+		    System.out.println("SQL (" + sqls.get(sql) + "ms) : " + sql);
 		    for (String s : adviseStatement) {
 			System.out.println(s);
 		    }

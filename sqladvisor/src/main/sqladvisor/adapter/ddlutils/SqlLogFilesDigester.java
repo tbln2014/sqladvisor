@@ -23,9 +23,8 @@ public class SqlLogFilesDigester implements Transformer<File, Map<String, Intege
 		if ( line.contains("executing prepstmnt ") && line.contains(" SELECT ")) {
 		    int offset = line.lastIndexOf("[params=") > -1 ? line.lastIndexOf("[params=") : line.length();
 		    statement = line.substring(line.indexOf(" SELECT "), offset);
-		}
-		if ( statement != null &&  line.contains("ms] spent")) {
-		    duration = Integer.valueOf(line.substring(line.indexOf("[", line.indexOf("ms] spent"))));
+		} else if ( statement != null &&  line.contains("ms] spent")) {
+		    duration = Integer.valueOf(line.substring(line.indexOf("[")+1, line.indexOf("ms] spent")).trim());
 		    filtered.put(statement, duration);
 		    statement = null;
 		    duration = Integer.valueOf(0);
